@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار تفاعلي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .question-container {
+            margin-bottom: 20px;
+        }
+        .question-container p {
+            font-weight: bold;
+        }
+        .answer-button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .answer-button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>اختبار تفاعلي</h1>
+
+    <div class="question-container" id="question1">
+        <p>1- لاحظ محمد أن الإمام يقرأ بسرعة مع أن ذلك كان طبقاً للأحكام التجويدية. ما نوع قراءة الإمام؟</p>
+        <button class="answer-button" onclick="checkAnswer(1, 'د. تحقيق')">أ. ترتيل</button><button class="answer-button" onclick="checkAnswer(1, 'د. تحقيق')">ب. حدَر</button><button class="answer-button" onclick="checkAnswer(1, 'د. تحقيق')">ج. تدوير</button><button class="answer-button" onclick="checkAnswer(1, 'د. تحقيق')">د. تحقيق</button></div>
+    <div class="question-container" id="question2">
+        <p>2- حروف ألفاظ مخرجة واختلفت صفتها فالحروف:</p>
+        <button class="answer-button" onclick="checkAnswer(2, 'أ. متقاربان')">أ. متقاربان</button><button class="answer-button" onclick="checkAnswer(2, 'أ. متقاربان')">ب. متشابهان</button><button class="answer-button" onclick="checkAnswer(2, 'أ. متقاربان')">ج. متنافسان</button><button class="answer-button" onclick="checkAnswer(2, 'أ. متقاربان')">د. متباعدان</button></div>
+    <div class="question-container" id="question3">
+        <p>3- أي الكلمات التالية تعتمد على المد اللازم؟</p>
+        <button class="answer-button" onclick="checkAnswer(3, 'د. الوقوف')">أ. تموين</button><button class="answer-button" onclick="checkAnswer(3, 'د. الوقوف')">ب. قرضا</button><button class="answer-button" onclick="checkAnswer(3, 'د. الوقوف')">ج. فرضا</button><button class="answer-button" onclick="checkAnswer(3, 'د. الوقوف')">د. الوقوف</button></div>
+    <div class="question-container" id="question4">
+        <p>4- اضطراب في الحروف عند النطق بالحرف الساكن حتى يسمع له نبرة قوية:</p>
+        <button class="answer-button" onclick="checkAnswer(4, 'د. القلقلة')">أ. التفخيم</button><button class="answer-button" onclick="checkAnswer(4, 'د. القلقلة')">ب. المد</button><button class="answer-button" onclick="checkAnswer(4, 'د. القلقلة')">ج. الترقيق</button><button class="answer-button" onclick="checkAnswer(4, 'د. القلقلة')">د. القلقلة</button></div>
+    <div class="question-container" id="question5">
+        <p>5- الوقوف على رأس الآية في قوله تعالى: 'أولئك هم المفلحون' يكون:</p>
+        <button class="answer-button" onclick="checkAnswer(5, 'أ. تمام')">أ. تمام</button><button class="answer-button" onclick="checkAnswer(5, 'أ. تمام')">ب. حسن</button><button class="answer-button" onclick="checkAnswer(5, 'أ. تمام')">ج. جائر</button><button class="answer-button" onclick="checkAnswer(5, 'أ. تمام')">د. كاف</button></div>
+    <div class="question-container" id="question6">
+        <p>6- كل آية فيها سجع:</p>
+        <button class="answer-button" onclick="checkAnswer(6, 'أ. مكة')">أ. مكة</button><button class="answer-button" onclick="checkAnswer(6, 'أ. مكة')">ب. مدينة</button><button class="answer-button" onclick="checkAnswer(6, 'أ. مكة')">ج. مكة إلا الثلاث سور</button><button class="answer-button" onclick="checkAnswer(6, 'أ. مكة')">د. مدينة إلا الثلاث سور</button></div>
+    <div class="question-container" id="question7">
+        <p>7- المهم الذي لا غنى عنه من معرفة في القرآن الكريم:</p>
+        <button class="answer-button" onclick="checkAnswer(7, 'ب. القراءات المختلفة في القرآن')">أ. قال تعالى</button><button class="answer-button" onclick="checkAnswer(7, 'ب. القراءات المختلفة في القرآن')">ب. القراءات المختلفة في القرآن</button><button class="answer-button" onclick="checkAnswer(7, 'ب. القراءات المختلفة في القرآن')">ج. قراءة الآيات بشكل سريع</button><button class="answer-button" onclick="checkAnswer(7, 'ب. القراءات المختلفة في القرآن')">د. مفهوم القصة</button></div>
+    <div class="question-container" id="question8">
+        <p>8- مؤلف كتاب المفردات في غريب القرآن هو:</p>
+        <button class="answer-button" onclick="checkAnswer(8, 'أ. الراغب الأصفهاني')">أ. الراغب الأصفهاني</button><button class="answer-button" onclick="checkAnswer(8, 'أ. الراغب الأصفهاني')">ب. الزركشي</button><button class="answer-button" onclick="checkAnswer(8, 'أ. الراغب الأصفهاني')">ج. ابن كثير</button><button class="answer-button" onclick="checkAnswer(8, 'أ. الراغب الأصفهاني')">د. علي الطنطاوي</button></div>
+    <div class="result" id="result"></div>
+
+    <script>
+        // الإجابة الصحيحة لكل سؤال
+        const correctAnswers = {
+'1': 'د. تحقيق',
+'2': 'أ. متقاربان',
+'3': 'د. الوقوف',
+'4': 'د. القلقلة',
+'5': 'أ. تمام',
+'6': 'أ. مكة',
+'7': 'ب. القراءات المختلفة في القرآن',
+'8': 'أ. الراغب الأصفهاني',
+
+        };
+
+        // دالة للتحقق من الإجابة
+        function checkAnswer(questionNumber, selectedAnswer) {
+            const resultDiv = document.getElementById('result');
+            if (selectedAnswer === correctAnswers[questionNumber]) {
+                resultDiv.innerHTML = `إجابتك على السؤال ${questionNumber} صحيحة!`;
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.innerHTML = `إجابتك على السؤال ${questionNumber} خاطئة. حاول مرة أخرى.`;
+                resultDiv.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
